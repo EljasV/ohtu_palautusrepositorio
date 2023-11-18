@@ -60,6 +60,28 @@ Register With Nonmatching Password And Password Confirmation
     Submit Credentials
     Registration Should Fail With Message  Password and password confirmation must be same.
 
+Login After Successful Registration
+    Set Username  kalle
+    Set Password  kalle123
+    Set Password Confirmation  kalle123
+    Submit Credentials
+    Go To Login Page
+    Set Username  kalle
+    Set Password  kalle123
+    Click Button  Login
+    Main Page Should Be Open
+
+Login After Failed Registration
+    Set Username  kalle
+    Set Password  kalle123
+    Set Password Confirmation  kalle124
+    Submit Credentials
+    Go To Login Page
+    Set Username  kalle
+    Set Password  kalle123
+    Click Button  Login
+    Login Page Should Be Open
+    Page Should Contain  Invalid username or password
 
 
 
